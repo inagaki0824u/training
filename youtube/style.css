@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+/* デフォルト */
+a {
+    color:#000;
+    text-decoration: none;
+}
+ul {
+    padding-left: 0px;
+    list-style-position: inside;
+    list-style-type: none;
+}
+/* resetcssを入れることを検討 調べて */
+
+/* ページレイアウト */
+.layout_page {
+    display: flex;
+}
+
+/* 共通要素 */
+.btn_login {
+    font-size:16px ;
+    color: blue;
+    display: inline-flex;
+    height: 38px;
+    align-items: center;
+    padding: 0 15px 0 50px;
+    border: 1px solid blue;
+    border-radius: 3%;
+    position: relative;
+}
+
+.btn_login::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+}
+
+/* ヘッダー */
+.header {
+    
+}
+
+.header > .container {
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* ハンバーガーメニュー */
+.button_burgur {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+}
+
+/* ロゴ */
+.area_logo_header {
+    margin: 0 0 0 10px;
+}
+
+.area_logo_header .logo {
+    display: block;
+    width: 80px;
+    height: 30px;
+    background-color: gray;
+}
+
+/* フォームヘッダー */
+.form_header {
+    margin:0 auto;
+
+}
+/* ナビ ヘッダー */
+.nav_header {
+    /* margin:0 0 0 auto; */
+}
+
+.list_nav_header {
+    display: flex;
+}
+
+.list_nav_header a:not(.btn_login){ 
+    /* notの用法、実際はおそらく別の書き方をする */
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+}
+
+/*  coment ＞を入れずにliとするとすべてのliに適応、＞ liで直下のliのみ */
+.list_nav_header > li + li {
+    margin: 0 0 0 15px;
+}
+
+/* サイドバー */
+.sidebar {
+    flex: 0 0 240px;
+}
+
+.sidebar .box{
+    padding: 10px 0;
+}
+
+.sidebar .box + .box {
+    border-top: 1px solid #ccc;
+}
+
+/* サイドバー ナビリスト */
+
+.list_nav_sidevar a {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 0 0 64px;
+    position: relative;
+}
+
+.list_nav_sidevar a::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+}
+
+/* サイドバー ログイン */
+.area_register_sidevar {
+    padding: 0 30px;
+}
+
+.area_register_sidevar .discription {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+/* メイン */
+.main {
+    flex: auto;
+    min-width: 10px;
+    padding: 24px;
+}
+
+.main .box {
+    padding: 30px 0;
+}
+
+.main .box + .box {
+    border-top: 3px solid #ccc;
+}
+
+.main .box .title {
+    font-size: 20px;
+}
+
+.main .box .recommended {
+    font-size: 20px;
+}
+
+/* ビデオリスト */
+.list_video {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+}
+.list_video > li {
+    box-sizing: border-box;
+    padding: 8px;
+    width: 25%;
+}
+
+/* サムネイル */
+.list_video .thumbnail {
+    width: 100%;
+    background-color: grey;
+}
+
+.list_video .thumbnail::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 56.25%;
+    
+}
+
+/* レイアウト */
+.list_video .layout {
+    display: flex;
+    margin: 12px 0 0 0;
+}
+
+/* アイキャッチ */
+.list_video .eye {
+    flex: 0 0 40px;
+    margin: 0 10px 0 0;
+}
+
+.list_video .img {
+    width: 100%;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.list_video .img::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    
+}
+
+/* テキストエリア */
+.list_video .text {
+    flex: auto;
+}
+
+.list_video .text .title_video {
+    font-size: 14px;
+    color: #000;
+}
+
+.list_video .text .user {
+    font-size: 14px;
+    color: grey
+}
+
+.list_video .text .count {
+    font-size: 14px;
+    color: grey
+}
